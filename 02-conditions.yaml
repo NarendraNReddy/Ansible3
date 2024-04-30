@@ -1,0 +1,7 @@
+- name: default value
+  hosts: localhost
+  become: no 
+  tasks:
+  - name: default value
+    ansible.builtin.debug:
+      msg: "{{Course}} is big"
