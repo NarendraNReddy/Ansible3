@@ -5,3 +5,13 @@
   - name: default value
     ansible.builtin.debug:
       msg: "{{Course | default('Ansible')}} is big"
+
+- name: lower
+  hosts: localhost
+  vars:
+    greetings: "GM friend ramesh"
+  become: no 
+  tasks:
+  - name: lower value
+    ansible.builtin.debug:
+      msg: {{greetings | lower}}      
