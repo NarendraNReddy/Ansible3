@@ -15,3 +15,13 @@
   - name: lower value
     ansible.builtin.debug:
       msg: "{{greetings | lower}}"   
+
+- name: upper
+  hosts: localhost
+  vars:
+    greetings: "Hello good morning"
+  become: no
+  tasks:
+  - name: upper
+    ansible.builtin.debug:
+      msg: "{{greetings | upper}}"        
