@@ -34,4 +34,4 @@
   tasks:
   - name: unique
     ansible.builtin.debug:
-      msg: "{{numbers.unique}}"         
+      msg: "{{numbers | unique}}"         
