@@ -57,7 +57,9 @@
   tasks:      
   - name: dict2items
     ansible.builtin.debug:
-      msg: "Dict items Before {{my_dict}}"
+      msg: "before::::{{my_dict}}"
+
+
 
   - name: dict2items
     ansible.builtin.debug:
