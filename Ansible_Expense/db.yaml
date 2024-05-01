@@ -50,7 +50,7 @@
 
   - name: print info
     ansible.builtin.debug:
-      msg: mysql_connection_output   
+      msg: "{{mysql_connection_output}}"   
 
 
 
