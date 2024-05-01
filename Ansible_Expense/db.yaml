@@ -23,14 +23,21 @@
     ansible.builtin.service:
       name: mysqld
       state: started
-      enabled: yes 
+      enabled: yes
 
-  - name: install python dependency PyMySQL
+  - name:
     ansible.builtin.pip:
-      name: 
+      name:
       - PyMySQL
-      - cryptography   
-      exeucutable: pip3.9
+      - cryptography
+      executable: pip3.9    
+
+  # - name: install python dependency PyMySQL
+  #   ansible.builtin.pip:
+  #     name: 
+  #     - PyMySQL
+  #     - cryptography   
+  #     exeucutable: pip3.9
 
   - name: Check db connection
     community.mysql.mysql_info:
